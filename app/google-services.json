@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "504738871026",
+    "firebase_url": "https://orbfirebaseproject.firebaseio.com",
+    "project_id": "orbfirebaseproject",
+    "storage_bucket": "orbfirebaseproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504738871026:android:3d5c8a11f874d343",
+        "android_client_info": {
+          "package_name": "com.example.orb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504738871026-258c4nlib82gt91ct5l1ti3unotrlqua.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.orb",
+            "certificate_hash": "78148ce60fd2955cee39f7c97b3dc24a11d80861"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3aQn9I-kKH1qbeQOedg7LUws-fBN48sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504738871026-gha8i835qhi592t0qt65a2g7ehbde2db.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
