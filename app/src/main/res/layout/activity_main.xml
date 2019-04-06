@@ -62,11 +62,13 @@
         android:layout_height="wrap_content"
         android:hint="Restoran nomi"
         android:layout_weight="1"
+        android:id="@+id/restoran"
         android:inputType="text"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Joylashuvi"
+        android:id="@+id/joylashuv"
         android:layout_weight="1"
         android:inputType="textMultiLine"/>
     <ScrollView
@@ -78,6 +80,7 @@
             android:layout_height="wrap_content"
             android:hint="Qo'shimcha izoh ucun"
             android:layout_weight="2"
+            android:id="@+id/izoh"
             android:inputType="textMultiLine"/>
     </ScrollView>
     <Button

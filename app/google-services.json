@@ -21,6 +21,14 @@
             "package_name": "com.example.orb",
             "certificate_hash": "78148ce60fd2955cee39f7c97b3dc24a11d80861"
           }
+        },
+        {
+          "client_id": "504738871026-b0bjjbl5l954d68uencsb8mtrt7e4mgo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.orb",
+            "certificate_hash": "1a2731ab1b55cc77b11c042ffd98cdaad4c2d082"
+          }
         }
       ],
       "api_key": [
