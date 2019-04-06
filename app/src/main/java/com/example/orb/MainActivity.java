@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
     public final String RESTORAN="RESTORAN";
     public final String LOCATION="LOCATION";
     public final String IZOH="IZOH";
-    private DocumentReference mDocRef=new FirebaseFirestore().getInstance().document("" );
+    private DocumentReference mDocRef= FirebaseFirestore.getInstance().document("Managers/manager1");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //mAuth = FirebaseAuth.getInstance();
+
+    }
+    public void onClick(View v){
         EditText Familiya=findViewById(R.id.Familiya);
         String LastName=Familiya.getText().toString();
         EditText Ism=findViewById(R.id.ism);
@@ -76,15 +79,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-//    private final String LAST_NAME="LAST_NAME";
-//    private final String FIRST_NAME="FIRST_NAME";
-//    private final String LOGIN="LOGIN";
-//    private final String PIN="PIN";
-//    private final String REPIN="REPIN";
-//    private final String TELRAQAM="TELRAQAM";
-//    private final String RESTORAN="RESTORAN";
-//    private final String LOCATION="LOCATION";
-//    private final String IZOH="IZOH";
-
 
 }
