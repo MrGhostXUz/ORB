@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/huger"
+    tools:context=".Register">
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="Ro'yxatdan o'tish"
+        android:textSize="25dp"
+        android:layout_weight="1"
+        android:textColor="@android:color/holo_orange_light"
+        android:textAllCaps="true" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Familiya"
+        android:hint="Familiya"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:layout_weight="1"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:id="@+id/ism"
+        android:layout_weight="1"
+        android:hint="Ism"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Parol"
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColor="@android:color/white"
+        android:layout_weight="1"
+        android:id="@+id/parol"
+        android:inputType="textPassword"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColor="@android:color/white"
+        android:hint="Parolni takrorlang"
+        android:layout_weight="1"
+        android:id="@+id/tasdiqlash"
+        android:inputType="textPassword"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"/>
+
+    <EditText
+        android:id="@+id/telefonraqam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:layout_weight="1"
+        android:hint="Telefon raqam"
+        android:inputType="phone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textSize="18dp"
+        android:id="@+id/reg"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal"
+        android:text="Ro'yxatdan o'tish"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:layout_marginBottom="250sp"
+        android:layout_marginLeft="130dp"/>
+
+</LinearLayout>
