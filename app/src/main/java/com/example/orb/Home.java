@@ -2,6 +2,7 @@ package com.example.orb;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -26,6 +27,7 @@ public class Home extends AppCompatActivity {
     private DatabaseReference RestaurantsRef;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    FloatingActionButton floatingActionButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,15 @@ public class Home extends AppCompatActivity {
         RestaurantsRef= FirebaseDatabase.getInstance().getReference().child("Restaurants");
 
         chiqish=findViewById(R.id.exit);
+        floatingActionButton=findViewById(R.id.floatingActionButton);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Home.this, RestaurantAddActivity.class);
+                startActivity(intent);
+            }
+        });
 
         chiqish.setOnClickListener(new View.OnClickListener() {
             @Override

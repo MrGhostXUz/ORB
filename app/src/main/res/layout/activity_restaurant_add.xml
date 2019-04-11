@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/holo_orange_light"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantAddActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:id="@+id/simple"
+        android:text="Restoran"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_dark"/>
+
+    <MultiAutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/simple"
+        android:text="Eslatma: Bu bo'lim faqat restoran menejerlari uchun, Dastur adminidan parolni olish uchun u bilan bog'lanishingizga to'g'ri keladi(+998916467671)"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/eslatma"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:id="@+id/name"
+        android:layout_height="175dp"
+        android:layout_below="@+id/eslatma"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:src="@mipmap/orb_round"
+        android:layout_marginLeft="30dp"/>
+    <ImageButton
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="30dp"
+        android:src="@android:drawable/ic_menu_camera"
+        android:id="@+id/camera"
+        android:layout_marginLeft="20dp"
+        android:layout_alignRight="@+id/eslatma"
+        android:layout_below="@+id/eslatma"
+        android:layout_alignEnd="@+id/eslatma"
+        android:layout_marginStart="20dp" />
+    <ImageButton
+
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignRight="@+id/eslatma"
+        android:src="@drawable/ic_menu_gallery"
+        android:layout_below="@+id/camera"
+        android:id="@+id/galery"
+        android:layout_alignEnd="@+id/eslatma"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restoran nomi"
+        android:id="@+id/simple2"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="30dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:id="@+id/simple3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/simple2"
+        android:hint="Restoran nomini kiriting" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joylashuvi"
+        android:id="@+id/simple4"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/simple3"
+        android:layout_marginLeft="30dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@id/simple5"
+        android:layout_below="@+id/simple4"
+        android:hint="Restoranning joylashuvini kiriting" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Murojaat uchun telefon"
+        android:id="@+id/simple6"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/simple5"
+        android:layout_marginLeft="30dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/simple6"
+        android:id="@+id/simple7"
+        android:hint="Telefon raqamini kiriting" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simple7"
+        android:id="@+id/simple8"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/googleg_standard_color_18"/>
+
+    <TextView
+        android:id="@+id/simple9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simple7"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="15dp"
+        android:text="Google Map orqali Restoran qo'shish"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/simple8"
+        android:id="@+id/simple11"
+        android:hint="Admin sizga bergan maxfiy raqamni kiriting..." />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simple11"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/holo_purple"
+        android:text="Ro'yxatdan o'tkazish"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
