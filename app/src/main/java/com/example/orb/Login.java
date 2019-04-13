@@ -24,7 +24,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import io.paperdb.Paper;
 
-
 public class Login extends AppCompatActivity {
 
 
@@ -33,6 +32,8 @@ private Button Enter;
 private ProgressDialog loadingBar;
 private String parentDbName="Users";
 private CheckBox checkBox;
+public static String log=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,8 +94,9 @@ private CheckBox checkBox;
                         if(usersData.getPIN().equals(pass)){
                             Toast.makeText(Login.this, "Muvaffaqiyatli bog'lanildi...", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
-
-                            Intent intent = new Intent(Login.this, Home.class);
+                            log=phone;
+                            Prevalent.currentOnlineUser=usersData;
+                            Intent intent = new Intent(Login.this, HomeActivity.class);
                             startActivity(intent);
                         }
                     }

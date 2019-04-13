@@ -56,19 +56,19 @@ public class Register extends AppCompatActivity {
         String Repin = Confirm.getText().toString();
         String telraqam = Telefon.getText().toString();
         if (TextUtils.isEmpty(LastName)) {
-            Toast.makeText(this, "Familyani kiriting", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Familyani kiriting", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(FirstName)) {
-            Toast.makeText(this, "Ismni kiriting", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Ismni kiriting", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(Pin)) {
-            Toast.makeText(this, "Parolni kiriting", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Parolni kiriting", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(Repin)) {
-            Toast.makeText(this, "Parolni tasdiqlang", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Parolni tasdiqlang", Toast.LENGTH_SHORT).show();
         } else if (!Pin.equals(Repin)) {
-            Toast.makeText(this, "Parolni to'g'ri tasdiqlang", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Parolni to'g'ri tasdiqlang", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(telraqam)) {
-            Toast.makeText(this, "Telefon raqamni kiriting", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Telefon raqamni kiriting", Toast.LENGTH_SHORT).show();
         } else {
 
             loadingBar.setTitle("Create Account");
@@ -87,7 +87,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (!dataSnapshot.child("Users").child(telraqam).exists() && Pin.equals(Repin)) {
-                    Map<String, Object> dataToSave = new HashMap<String, Object>();
+                    Map<String, Object> dataToSave = new HashMap<>();
                     dataToSave.put(LAST_NAME, LastName);
                     dataToSave.put(FIRST_NAME, FirstName);
                     dataToSave.put(PIN, Pin);
@@ -98,7 +98,7 @@ public class Register extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(Register.this, "Akkaunt muvaffaqiyatli yaratildi", Toast.LENGTH_SHORT);
+                                        Toast.makeText(Register.this, "Akkaunt muvaffaqiyatli yaratildi", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
                                         Intent intent = new Intent(Register.this, Login.class);

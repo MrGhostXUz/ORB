@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Muvaffaqaiyatli amalga oshyapti ...", Toast.LENGTH_SHORT).show();
                         loadingBar.dismiss();
 
-                        Intent intent = new Intent(MainActivity.this, Home.class);
+                        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                         startActivity(intent);
                     }
                 }
