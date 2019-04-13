@@ -4,6 +4,8 @@ package com.example.orb;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
 import com.example.orb.Model.Restaurants;
@@ -55,5 +57,9 @@ public class Buyurtma extends AppCompatActivity {
 
             }
         });
+    }
+    public void get(View v){
+        final DatePicker datePicker=findViewById(R.id.calendar);
+        OrderDay.setText(datePicker.getDayOfMonth()+"."+datePicker.getMonth()+"."+datePicker.getYear());
     }
 }
