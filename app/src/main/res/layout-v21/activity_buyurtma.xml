@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light" 
+    android:orientation="vertical"
+    tools:context=".Buyurtma">
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/resname"
+        android:text="Restoran"
+        android:layout_gravity="center"
+        android:textSize="40dp"
+        android:layout_height="wrap_content" />
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarTextColor="@android:color/holo_blue_bright"
+        android:datePickerMode="calendar"
+        android:layout_gravity="center">
+    </DatePicker>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="DD.MM.YYYY"
+        android:layout_gravity="center"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="Buyurtma qilish"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/holo_purple"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" 
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="   Yo'riqnoma: Qizilga bo'yalgan sanalarga buyurtma berib bo'lmaydi. Ular yoki o'tib ketgan yoki band qilingan. Restoran menejeri sizning buyurtmangizni tasdiqlashi uchun unga telefon qilib buyurtmangizni kelishing (+998912471087)"
+        android:textSize="12sp"
+        />
+    
+    
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/resname"
+            android:text="Restoran"
+            android:layout_gravity="center"
+            android:textSize="40dp"
+            android:layout_height="wrap_content" />
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendar"
+            android:calendarTextColor="@android:color/white"
+            android:layout_gravity="center">
+        </DatePicker>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="get"
+            android:id="@+id/tanla"
+            android:text="tanlash"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="DD.MM.YYYY"
+            android:textSize="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buyurtma qilish"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/holo_purple"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="   Yo'riqnoma: Qizilga bo'yalgan sanalarga buyurtma berib bo'lmaydi. Ular yoki o'tib ketgan yoki band qilingan. Restoran menejeri sizning buyurtmangizni tasdiqlashi uchun unga telefon qilib buyurtmangizni kelishing (+998912471087)"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+</ScrollView>
+

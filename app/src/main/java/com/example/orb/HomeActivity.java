@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity
     private DatabaseReference RestaurantsRef;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-    FloatingActionButton floatingActionButton;
+    FloatingActionButton floatingActionButton, fab2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +47,15 @@ public class HomeActivity extends AppCompatActivity
         recyclerView.setLayoutManager(layoutManager);
 
         RestaurantsRef=FirebaseDatabase.getInstance().getReference().child("Restaurants");
-
         floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+        fab2=findViewById(R.id.fab2);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this, RestaurantManagement.class);
+                startActivity(intent);
+            }
+        });
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,23 +86,32 @@ public class HomeActivity extends AppCompatActivity
         FirebaseRecyclerAdapter<Restaurants, RestaurantViewHolder> adapter =
                 new FirebaseRecyclerAdapter<Restaurants, RestaurantViewHolder>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull RestaurantViewHolder holder, int position, @NonNull Restaurants model) {
+                    protected void onBindViewHolder(@NonNull RestaurantViewHolder holder, int position, @NonNull final Restaurants model) {
                         holder.RestaurantName.setText(model.getNAME());
                         holder.Joylashuv.setText(model.getLOCATION());
                         holder.ManagerName.setText(model.getMANAGERNAME());
                         holder.Telefon.setText(model.getPHONE());
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent=new Intent(HomeActivity.this, Buyurtma.class);
+                                intent.putExtra("pid", model.getPID());
+                                startActivity(intent);
+                            }
+                        });
                         Picasso.get().load(model.getIMAGE()).into(holder.imageView);
                     }
 
 
                     @NonNull
                     @Override
-                    public RestaurantViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-                        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.single_restaurant, viewGroup, false);
+                    public RestaurantViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_restaurant, parent, false);
                         RestaurantViewHolder holder = new RestaurantViewHolder(view);
                         return holder;
                     }
                 };
+
         recyclerView.setAdapter(adapter);
         adapter.startListening();
     }

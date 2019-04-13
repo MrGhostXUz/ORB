@@ -33,8 +33,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+
 public class RestaurantAddActivity extends AppCompatActivity {
     private static final int GalleryPick = 1;
+
     public final String SUPERPIN = "SUPERPIN";
     public final String RESTAURANT_NAME = "RESTAURANT_NAME";
     public final String GEOLOCATION = "LOCATION";
@@ -183,6 +185,7 @@ public class RestaurantAddActivity extends AppCompatActivity {
         dataToSave.put(GEOLOCATION, Joylashuv);
         dataToSave.put(PHONENUMBER, telefon);
         dataToSave.put(SUPERPIN, Parol);
+        dataToSave.put("tekshir", "false");
         RestaurantRef.updateChildren(dataToSave)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -190,6 +193,7 @@ public class RestaurantAddActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             loadingBar.dismiss();
                             Toast.makeText(RestaurantAddActivity.this, "Restoran qo'shildi", Toast.LENGTH_SHORT).show();
+                            Intent intent=new Intent(RestaurantAddActivity.this, HomeActivity.class);
                         }
                         else {
                             String message=task.getException().toString();

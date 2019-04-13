@@ -2,14 +2,16 @@ package com.example.orb.Model;
 
 public class Restaurants
 {
-    private String NAME, MANAGERNAME, LOCATION, PHONE, IMAGE;
+    private String NAME, MANAGERNAME, LOCATION, PHONE, IMAGE, tekshir, PID;
 
     public Restaurants(){
     }
 
-    public Restaurants(String NAME, String MANAGERNAME, String LOCATION, String PHONE, String IMAGE) {
+    public Restaurants(String NAME, String MANAGERNAME, String LOCATION, String PHONE, String IMAGE, String tekshir, String PID) {
         this.NAME = NAME;
+        this.PID=PID;
         this.MANAGERNAME = MANAGERNAME;
+        this.tekshir=tekshir;
         this.LOCATION = LOCATION;
         this.PHONE = PHONE;
         this.IMAGE = IMAGE;
@@ -31,6 +33,14 @@ public class Restaurants
         this.MANAGERNAME = MANAGERNAME;
     }
 
+    public String gettekshir() {
+        return tekshir;
+    }
+
+    public void settekshir(String tekshir) {
+        this.tekshir = tekshir;
+    }
+
     public String getLOCATION() {
         return LOCATION;
     }
@@ -46,12 +56,22 @@ public class Restaurants
     public void setPHONE(String PHONE) {
         this.PHONE = PHONE;
     }
+
     public String getIMAGE() {
-        return NAME;
+        return IMAGE;
     }
 
     public void setIMAGE(String NAME) {
-        this.NAME = NAME;
+        this.IMAGE = IMAGE;
     }
+
+    public String getPID() {
+        return IMAGE;
+    }
+
+    public void setPID(String NAME) {
+        this.PID = PID;
+    }
+
 }
 
